@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Buscar CNS/CPF</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 10px;
+      width: 150px;
+    }
+    #cpf-cns {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+    #buscarcns {
+      width: 100%;
+      padding: 6px;
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-bottom: 8px;
+    }
+    #buscarcns:disabled {
+      background: #90caf9;
+      cursor: not-allowed;
+    }
+    #buscarcpf {
+      width: 100%;
+      padding: 6px;
+      background: #058d49;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #buscarcpf:disabled {
+      background: #8cc4a8;
+      cursor: not-allowed;
+    }
+    #preenchercompleto {
+      width: 100%;
+      padding: 6px;
+      background: #d32f2f;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    #preenchercompleto:disabled {
+      background: #ef9a9a;
+      cursor: not-allowed;
+    }
+    #ok-message {
+      display: none;
+      margin-top: 15px;
+      text-align: center;
+      color: #388e3c;
+      font-weight: bold;
+      font-size: 15px;
+      background: #e8f5e9;
+      border-radius: 4px;
+      padding: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="cpf-cns" placeholder="CPF ou CNS">
+  <button id="buscarcns">Buscar CNS por CPF</button>
+  <button id="buscarcpf">Buscar CPF por CNS</button>
+  <button id="preenchercompleto">Preencher Dados Completos</button>
+  <div id="ok-message">OK!</div>
+  <script src="popup.js"></script>
+</body>
+</html>
