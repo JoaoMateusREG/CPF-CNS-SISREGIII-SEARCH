@@ -40,6 +40,37 @@ function injetarBotoes() {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   `;
   
+  // Botão de fechar (X)
+  const btnFechar = document.createElement('button');
+  btnFechar.textContent = '✕';
+  btnFechar.style.cssText = `
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  `;
+  btnFechar.onmouseover = () => btnFechar.style.background = '#d32f2f';
+  btnFechar.onmouseout = () => btnFechar.style.background = '#f44336';
+  btnFechar.onclick = () => {
+    container.remove();
+    botoesInjetados = false;
+    console.log('Botões removidos manualmente');
+  };
+  
   // Botão Buscar CNS
   const btnBuscarCNS = document.createElement('button');
   btnBuscarCNS.textContent = 'Buscar CNS';
@@ -95,6 +126,7 @@ function injetarBotoes() {
   btnPreencherCompleto.onclick = () => preencherCompleto();
   
   // Adiciona os botões ao container
+  container.appendChild(btnFechar);
   container.appendChild(btnBuscarCNS);
   container.appendChild(btnBuscarCPF);
   container.appendChild(btnPreencherCompleto);
